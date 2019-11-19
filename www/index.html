@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;"> -->
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <title>Usando cordova e firebase para cadastro</title>
+        
+        <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-app.js"></script>
+        <!-- <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-analytics.js"></script> -->
+        <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-auth.js"></script>
+        <!--    <script defer src="https://www.gstatic.com/firebasejs/6.2.0/firebase-auth.js"></script> -->
+
+        <script src="./js/fireBaseConfig.js"></script>
+        <script src="./js/fireBaseAuthFeatures.js"></script>
+        <script src="./js/fireBaseAppInit.js"></script>
+
+    </head>
+    <body>
+
+        <div class="app">
+            <h1>Autenticando email com FireBase</h1>
+            <fieldset class="field">
+                <legend>Inscrever-se</legend>
+                <div class="input">
+                    <label>Email</label>
+                    <input type="text" id="email" size="25" maxlength="40" placeholder="Digite seu email aqui">
+                </div>
+                <div class="input">
+                    <label>Senha</label>
+                    <input type="password" id="senha" size="20" maxlength="15" placeholder="Digite sua senha aqui">
+                </div>
+                <div class="btns">
+                    <input type="button" onclick="singup()" value="Inscrever-se">
+                    <input type="button" onclick="mudarSenha()" value="Alterar senha">
+                    <input type="button" onclick="login()" value="Logar">
+                </div>
+            </fieldset>
+            
+            <fieldset class="field">
+                <legend>Informações</legend>
+                <div class="currentUser">
+                    <input type="button" onclick="showCurrentUser()" value="Consultar usuário">
+                </div>
+                <label id="lbUserLoggedIn"></label>
+                <div class="btnSair">
+                    <input type="button" onclick="logout()" value="Sair">    
+                </div>
+            </fieldset>
+        </div>
+
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+    </body>
+</html>

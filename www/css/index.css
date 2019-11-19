@@ -1,0 +1,52 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    outline: 0px;
+    box-sizing: border-box;
+}
+body, html{
+    height: 100%;
+}
+.app{
+    height: 100%;
+    width: 400px;
+    margin-left: 20px;
+    margin-top: 10px;
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
+.field{
+    /* height: 200px;*/
+    width: 400px;
+    display: inline-block;
+    padding: 5px;
+    justify-content: center;
+    align-items: center;
+}
+.input{
+    margin: 5px;
+}
+.btns{
+    margin: 5px;
+}
+.btns > input[value="Inscrever-se"]{
+    width: 95px;
+}
+.btns > input[value="Alterar senha"]{
+    width: 95px;
+}
+.btns > input[value="Logar"]{
+    width: 70px;
+}
+.currentUser > input{
+    margin: 5px;
+    width: 120px;
+}
+.btnSair > input{
+    margin: 5px;
+    width: 50px;
+}
+#lbUserLoggedIn{
+    margin: 5px;
+}
